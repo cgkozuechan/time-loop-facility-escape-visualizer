@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+    <title>Time Loop Facility Visualizer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TIME LOOP FACILITY ESCAPE - VISUALIZER</h1>
+        </header>
+        <main>
+            <section class="input-section">
+                <div class="textarea-group">
+                    <div class="field">
+                        <label for="input-data">INPUT</label>
+                        <textarea id="input-data" placeholder="5 6 2&#10;#####&#10;#a###&#10;#S..#&#10;###A#&#10;#E..#&#10;#####"></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="output-data">OUTPUT</label>
+                        <textarea id="output-data" placeholder="W W W W W U&#10;R R D D L L"></textarea>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="visualize-btn">Visualize</button>
+                </div>
+            </section>
+            
+            <section class="visualizer-section">
+                <div id="canvas-container">
+                    <canvas id="grid-canvas"></canvas>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="controls">
+            <div class="playback-buttons">
+                <button id="prev-step-btn">Prev</button>
+                <button id="next-step-btn">Next</button>
+            </div>
+            <div class="slider-container">
+                <div class="range-wrapper">
+                    <input type="range" id="time-slider" min="0" max="0" value="0">
+                    <div id="slider-markers" class="markers"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
